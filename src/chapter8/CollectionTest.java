@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.HashSet;
 
 /**
- * Á·Ï°Collection¼¯ºÏµÄ»ù±¾·½·¨
+ * ç»ƒä¹ Collectioné›†åˆçš„åŸºæœ¬æ–¹æ³•
  * add
  * addAll
  * clear
@@ -23,26 +23,26 @@ import java.util.HashSet;
 public class CollectionTest{
 	public static void main(String[] args){
 		Collection c = new ArrayList();
-		c.add("ËïÎò¿Õ");
-		//CollectionÈÝÆ÷ÄÚÖ»¿ÉÒÔÊ¢×°¶ÔÏó JavaÖ§³Ö×Ô¶¯×°Ïä
+		c.add("å­™æ‚Ÿç©º");
+		//Collectionå®¹å™¨å†…åªå¯ä»¥ç››è£…å¯¹è±¡ Javaæ”¯æŒè‡ªåŠ¨è£…ç®±
 		c.add(6); 
-		System.out.println("ÔªËØ¸öÊýÊÇ: " + c.size());
-		System.out.println("¼¯ºÏÊÇ·ñ°üº¬ÔªËØ\"ËïÎò¿Õ\": " + c.contains("ËïÎò¿Õ"));
+		System.out.println("å…ƒç´ ä¸ªæ•°æ˜¯: " + c.size());
+		System.out.println("é›†åˆæ˜¯å¦åŒ…å«å…ƒç´ \"å­™æ‚Ÿç©º\": " + c.contains("å­™æ‚Ÿç©º"));
 		c.remove(6);
-		System.out.println("É¾³ýÒ»¸öÔªËØºó, ÔªËØ¸öÊýÊÇ: " + c.size());
-		c.add("Java EEÆóÒµÓ¦ÓÃÊµÕ½");
+		System.out.println("åˆ é™¤ä¸€ä¸ªå…ƒç´ åŽ, å…ƒç´ ä¸ªæ•°æ˜¯: " + c.size());
+		c.add("Java EEä¼ä¸šåº”ç”¨å®žæˆ˜");
 		System.out.println(c);
 		Collection books = new HashSet();
-		books.add("·è¿ñJava½²Òå");
-		books.add("Java EEÆóÒµÓ¦ÓÃÊµÕ½");
+		books.add("ç–¯ç‹‚Javaè®²ä¹‰");
+		books.add("Java EEä¼ä¸šåº”ç”¨å®žæˆ˜");
 		c.removeAll(books);
-		System.out.println("c¼¯ºÏ¼õÈ¥books¼¯ºÏºó: " + c);
+		System.out.println("cé›†åˆå‡åŽ»booksé›†åˆåŽ: " + c);
 		c.retainAll(books);
-		System.out.println("Á½¸ö¼¯ºÏÈ¡½»¼¯ºó: " + c);
+		System.out.println("ä¸¤ä¸ªé›†åˆå–äº¤é›†åŽ: " + c);
 		
-		//Java 8ÐÂÌØÐÔ
-		//forEachÀ´×ÔCollectionµÄ¸¸½Ó¿Ú
-		//²ÎÊýConsumer action ½èÖúlambda±í´ïÊ½À´´¦ÀíÃ¿Ò»¸öÔªËØ
-		books.forEach(ele -> System.out.println("ÔªËØÎª: " + ele));
+		//Java 8æ–°ç‰¹æ€§
+		//forEachæ¥è‡ªCollectionçš„çˆ¶æŽ¥å£
+		//å‚æ•°Consumer action å€ŸåŠ©lambdaè¡¨è¾¾å¼æ¥å¤„ç†æ¯ä¸€ä¸ªå…ƒç´ 
+		books.forEach(ele -> System.out.println("å…ƒç´ ä¸º: " + ele));
 	}
 }
