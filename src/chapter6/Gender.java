@@ -5,6 +5,10 @@ package chapter6;
  * 生成的是内部匿名子类的对象
  */
 
+/**
+ * Q: 运行时应该是Gender$1 Gender$2 为何会变成全1？
+ */
+
 interface GenderDesc{
 	void info();
 }
@@ -17,12 +21,12 @@ enum Gender implements GenderDesc{
 		public void info(){
 			System.out.println("用于描述男性");
 		}
-	}, FAMALE("女"){
+	}, FEMALE("女"){
 		public void info(){
 			System.out.println("用于描述女性");
 		}
 	};
-	
+
 	private final String name;
 	
 	private Gender(String name){
@@ -35,5 +39,6 @@ enum Gender implements GenderDesc{
 	
 	public static void main(String[] args){
 		Gender.MALE.info();
+		Gender.FEMALE.info();
 	}
 }
