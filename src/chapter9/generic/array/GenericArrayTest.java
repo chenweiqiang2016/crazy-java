@@ -13,6 +13,7 @@ public class GenericArrayTest {
 	public static void main(String[] args){
 		//List<String>[] lsa = new ArrayList<String>[10]; //Cannot create a generic array of ArrayList<String>
 
+		//错, 报了
 		//以下代码未报unchecked 但是执行出现ClassCastException 违反泛型设计原则
 		List<String>[] lsa = new ArrayList[10];
 		
@@ -28,6 +29,10 @@ public class GenericArrayTest {
 		System.out.println(((List<Integer>)oa[1]).get(0)); //正确
 		//System.out.println(((List<String>)oa[1]).get(0)); //java.lang.ClassCastException
 		
+		//++++++++++++++++
+		//String s = lsa[1].get(0);
+		//++++++++++++++++
+		
 		
 		List<?>[] lsa2 = new ArrayList<?>[10];
 		
@@ -39,7 +44,15 @@ public class GenericArrayTest {
 		
 		oa2[1] = li2;
 		
-		System.out.println(((List<String>)oa2[1]).get(0)); //java.lang.Integer cannot be cast to java.lang.String
+		//System.out.println(((List<String>)oa2[1]).get(0)); //java.lang.Integer cannot be cast to java.lang.String
+		
+		//+++++++++++++
+		//String s2 = (String)(lsa2[1].get(0));
+		Object target = lsa2[1].get(0);
+		if(target instanceof String){
+			String s3 = (String)target;
+		}
+		//+++++++++++++
 
 	}
 
