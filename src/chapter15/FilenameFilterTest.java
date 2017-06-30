@@ -1,13 +1,12 @@
 import java.io.File;
 import java.io.FilenameFilter;
 
-
-public class FilenameFilterTest{
-    public static void main(String[] args){
-//目标类型是FilenameFilter 实现里面的accept方法
-String[] names = new File(".").list((dir,name) -> name.endsWith(".java") || new  File(name).isDirectory());
-for(String name:names){
-System.out.println(name);
-}
-}
+public class FilenameFilterTest {
+	public static void main(String[] args) {
+		// 鐩爣绫诲瀷鏄疐ilenameFilter 瀹炵幇閲岄潰鐨刟ccept鏂规硶
+		String[] names = new File(".").list((dir, name) -> name.endsWith(".java") || new File(name).isDirectory());
+		for (String name : names) {
+			System.out.println(name);
+		}
+	}
 }
