@@ -1,44 +1,40 @@
+
 //package chapter15;
+//Windowså†™çš„ä»£ç  ä¼ åˆ°githubæ­£å¸¸æ˜¾ç¤ºæ±‰å­— ä¸‹è½½åˆ°Macä¸Šæ˜¾ç¤ºæ˜¯ä¹±ç 
 
 import java.io.File;
 
-public class FileTest{
-    public static void main(String[] args){
-        File f = new File(".");
-        System.out.println(f.getName());//´òÓ¡³öÀ´µÄÊÇ.
-        System.out.println(f.getPath());//´òÓ¡µÄ»¹ÊÇ.
-//·µ»ØFile¶ÔÏó
-       System.out.println(f.getAbsoluteFile());
-System.out.println(f.getAbsolutePath());
-System.out.println(f.getParent());//·µ»Ønull
+public class FileTest {
+	public static void main(String[] args) {
+		File f = new File(".");
+		System.out.println(f.getName());// æ‰“å°å‡ºæ¥çš„æ˜¯.
+		System.out.println(f.getPath());// æ‰“å°çš„è¿˜æ˜¯.
+		// è¿”å›Fileå¯¹è±¡
+		System.out.println(f.getAbsoluteFile());
+		System.out.println(f.getAbsolutePath());
+		System.out.println(f.getParent());// è¿”å›null
 
-System.out.println(f.exists());
-System.out.println(f.canRead());
-System.out.println(f.canWrite());
-System.out.println("ÊÇ·ñÊÇÎÄ¼ş£º"+ f.isFile());
-System.out.println("ÊÇ·ñÊÇÄ¿Â¼£º"+f.isDirectory());
-System.out.println("ÊÇ·ñÊÇ¾ø¶ÔÂ·¾¶£º"+f.isAbsolute());
+		System.out.println(f.exists());
+		System.out.println(f.canRead());
+		System.out.println(f.canWrite());
+		System.out.println("æ˜¯å¦æ˜¯æ–‡ä»¶ï¼š" + f.isFile());
+		System.out.println("æ˜¯å¦æ˜¯ç›®å½•ï¼š" + f.isDirectory());
+		System.out.println("æ˜¯å¦æ˜¯ç»å¯¹è·¯å¾„ï¼š" + f.isAbsolute());
 
+		System.out.println(f.lastModified());// æœ€åä¿®æ”¹æ—¶é—´
+		System.out.println(f.length());
 
-System.out.println(f.lastModified());//×îºóĞŞ¸ÄÊ±¼ä
-System.out.println(f.length());
+		System.out.println(f.list());// è¿”å›String[]
 
+		File newF = new File("cwq.txt");
+		try {
+			newF.createNewFile();
 
-System.out.println(f.list());//·µ»ØString[]
+			newF.delete();
 
-File newF = new File("cwq.txt");
-try{
-newF.createNewFile();
+			File.createTempFile("mail", ".csv", new File("."));
+		} catch (Exception e) {
+		}
 
-newF.delete();
-
-File.createTempFile("mail",".csv", new File("."));
-}catch(Exception e){
-}
-
-
-
-
-
-  }
+	}
 }
