@@ -1,3 +1,5 @@
+package chapter15;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.FileOutputStream;
@@ -7,7 +9,7 @@ public class RedirectOut{
         try(
         PrintStream ps = new PrintStream(new FileOutputStream("out.txt"));){
              System.setOut(ps);
-             System.out.println("这是普通字符串");
+             System.out.println("脮芒脢脟脝脮脥篓脳脰路没麓庐");
              System.out.println(new RedirectOut());
         }catch(IOException e){
             e.printStackTrace();

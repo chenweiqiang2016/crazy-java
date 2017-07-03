@@ -1,4 +1,4 @@
-
+package chapter15.test;
 
 public class IndexOfTest{
     public static void main(String[] args){

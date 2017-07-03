@@ -1,13 +1,15 @@
+package chapter15;
+
 import java.io.IOException;
 import java.io.PushbackReader;
 import java.io.FileReader;
 
-//Ñ°ÕÒnew PushbackReaderÇ°ÃæµÄÄÚÈİ
+//å¯»æ‰¾new PushbackReaderå‰é¢çš„å†…å®¹
 public class PushbackTest{
     public static void main(String[] args){
     try(PushbackReader pushbackReader = new PushbackReader(new FileReader("PushbackTest.java"),64)){
-      char[] buffer = new char[32];//Õâ¸ö32ÓĞµã½²¾¿ Òª´óÓÚÑ°ÕÒ×Ö·û´®µÄ³¤¶È
-      String lastContent = ""; //»¹ÊÇÒª¸³ÓèÒ»¸öÖµµÄ
+      char[] buffer = new char[32];//è¿™ä¸ª32æœ‰ç‚¹è®²ç©¶ è¦å¤§äºå¯»æ‰¾å­—ç¬¦ä¸²çš„é•¿åº¦
+      String lastContent = ""; //è¿˜æ˜¯è¦èµ‹äºˆä¸€ä¸ªå€¼çš„
       int hasRead = 0;
       int targetIndex = 0;
       while((hasRead=(pushbackReader.read(buffer))) > 0){
@@ -17,25 +19,25 @@ public class PushbackTest{
           String contactStr = lastContent + content;
 
           if((targetIndex=contactStr.indexOf("new PushbackReader(")) > 0){
-              //ÖØĞÂ¶¨ÒåÒ»¸ö³¤¶ÈÎªtargetIndexµÄÊı×é
+              //é‡æ–°å®šä¹‰ä¸€ä¸ªé•¿åº¦ä¸ºtargetIndexçš„æ•°ç»„
               if(targetIndex > 32){
-                 buffer = new char[targetIndex]; //Éú³ÉĞÂµÄ½Ï³¤µÄbuffer
+                 buffer = new char[targetIndex]; //ç”Ÿæˆæ–°çš„è¾ƒé•¿çš„buffer
               }
-              //ÒÔÏÂÊÇbug´úÂë ³ÌĞò²»½áÊø
+              //ä»¥ä¸‹æ˜¯bugä»£ç  ç¨‹åºä¸ç»“æŸ
               //pushbackReader.unread(contactStr.toCharArray());
               //pushbackReader.read(buffer);
               //System.out.println(buffer);
               
-              //½«±¾´ÎÄÚÈİºÍÉÏ´ÎÄÚÈİÒ»ÆğÍÆ»Ø»º³åÇø
-              //ÌØ±ğ×¢Òâ´ÎĞòÎÊÌâ
+              //å°†æœ¬æ¬¡å†…å®¹å’Œä¸Šæ¬¡å†…å®¹ä¸€èµ·æ¨å›ç¼“å†²åŒº
+              //ç‰¹åˆ«æ³¨æ„æ¬¡åºé—®é¢˜
               pushbackReader.unread(contactStr.toCharArray());
 
-              pushbackReader.read(buffer,0,targetIndex);//»á¶ÁcontactStrÇ°ÃæµÄ²¿·Ö
+              pushbackReader.read(buffer,0,targetIndex);//ä¼šè¯»contactStrå‰é¢çš„éƒ¨åˆ†
 
-              //´òÓ¡¶ÁÈ¡µÄÄÚÈİ
-              System.out.println("ÕÒµ½Ö¸¶¨µÄÄÚÈİ");
+              //æ‰“å°è¯»å–çš„å†…å®¹
+              System.out.println("æ‰¾åˆ°æŒ‡å®šçš„å†…å®¹");
               System.out.print(new String(buffer, 0, targetIndex));
-              System.exit(0); //Ã»ÓĞÕâÒ»¾äpushback buffer overflow
+              System.exit(0); //æ²¡æœ‰è¿™ä¸€å¥pushback buffer overflow
 
           }else{
               System.out.println(lastContent);

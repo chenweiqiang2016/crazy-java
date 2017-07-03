@@ -1,31 +1,29 @@
-//windowsÏÂ±£´æÎªANSI±àÂë ±àÒë²Å²»»á³ö´í
+package chapter15;
+
+//windowsä¸‹ä¿å­˜ä¸ºANSIç¼–ç  ç¼–è¯‘æ‰ä¸ä¼šå‡ºé”™
 
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.IOException;
 
-public class StringNodeTest{
-    public static void main(String[] args){
-        String src = "°×ÈÕÒÀÉ½¾¡\n" +
-          "»ÆºÓÈëº£Á÷\n"  + 
-          "ÓûÇîÇ§ÀïÄ¿\n"  +
-          "¸üÉÏÒ»²ãÂ¥\n";
-        try(
-        StringReader sr = new StringReader(src);)
-        {
-        char[] buffer = new char[32];
-        int hasRead = 0;
-        while((hasRead=sr.read(buffer))>0){
-            System.out.print(new String(buffer,0,hasRead));
-        }}catch(IOException ioe){
-        ioe.printStackTrace();
-        }
+public class StringNodeTest {
+	public static void main(String[] args) {
+		String src = "ç™½æ—¥ä¾å±±å°½\n" + "é»„æ²³å…¥æµ·æµ\n" + "æ¬²ç©·åƒé‡Œç›®\n" + "æ›´ä¸Šä¸€å±‚æ¥¼\n";
+		try (StringReader sr = new StringReader(src);) {
+			char[] buffer = new char[32];
+			int hasRead = 0;
+			while ((hasRead = sr.read(buffer)) > 0) {
+				System.out.print(new String(buffer, 0, hasRead));
+			}
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 
-        StringWriter sw = new StringWriter();
-        sw.write("ÕâÊÇ¸öÃÀÀöµÄ²İÔ­\n");
-        sw.write("ÓĞÒ»¸öÆ¯ÁÁµÄ¹½Á¹\n");
-        System.out.print("ÏÂÃæÊÇStringWriterÀïÃæµÄÄÚÈİ\n");
-        System.out.print(sw.toString());
+		StringWriter sw = new StringWriter();
+		sw.write("è¿™æ˜¯ä¸ªç¾ä¸½çš„è‰åŸ\n");
+		sw.write("æœ‰ä¸€ä¸ªæ¼‚äº®çš„è‡å‡‰\n");
+		System.out.print("ä¸‹é¢æ˜¯StringWriteré‡Œé¢çš„å†…å®¹\n");
+		System.out.print(sw.toString());
 
-    }
+	}
 }

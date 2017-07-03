@@ -1,3 +1,5 @@
+package chapter15;
+
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -6,10 +8,10 @@ import java.io.FileOutputStream;
 public class FileOutputStreamTest{
 public static void main(String[] args) throws IOException{
     FileInputStream fis = new FileInputStream("FileOutputStreamTest.java");
-    byte[] buf = new byte[32]; //Õâ¸öÊ±ºòÐ¡Ò»µã¿ÉÒÔµÄ
+    byte[] buf = new byte[32]; //ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ð¡Ò»ï¿½ï¿½ï¿½ï¿½Ôµï¿½
     int hasRead = 0;
     FileOutputStream fos = new FileOutputStream("newFile.txt");
-    while((hasRead=fis.read(buf))>0){//¶Á¶àÉÙÐ´¶àÉÙ
+    while((hasRead=fis.read(buf))>0){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
      fos.write(buf);
 }
 fos.close();

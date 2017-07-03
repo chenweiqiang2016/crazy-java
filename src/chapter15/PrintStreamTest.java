@@ -1,21 +1,19 @@
+package chapter15;
+
 import java.io.PrintStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-//使用PrintStream可以更方便的输出
-public class PrintStreamTest{
-    public static void main(String[] args){
-      try(
-       FileOutputStream fos = new FileOutputStream("test.txt");
-       PrintStream ps = new PrintStream(fos);)
-       {
-          ps.println("普通字符串");
-          // 直接使用PrintStream输出对象
-          ps.println(new PrintStreamTest());
-        }catch(IOException ioe){
-          ioe.printStackTrace();
-        }
+//浣跨敤PrintStream鍙互鏇存柟渚跨殑杈撳嚭
+public class PrintStreamTest {
+	public static void main(String[] args) {
+		try (FileOutputStream fos = new FileOutputStream("test.txt"); PrintStream ps = new PrintStream(fos);) {
+			ps.println("鏅�氬瓧绗︿覆");
+			// 鐩存帴浣跨敤PrintStream杈撳嚭瀵硅薄
+			ps.println(new PrintStreamTest());
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
 
-       
-}
+	}
 }

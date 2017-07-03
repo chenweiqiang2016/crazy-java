@@ -1,22 +1,23 @@
+package chapter15;
+
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Scanner;
 
-public class RedirectIn{
-    public static void main(String[] args){
-        try(
-        FileInputStream fis= new FileInputStream("RedirectIn.java");){
-            System.setIn(fis);
-            //创建Scanner对象 获取标准输入
-            Scanner scanner = new Scanner(System.in);
-            //把回车作为分隔符
-            scanner.useDelimiter("\n");
-            while(scanner.hasNext()){
-                System.out.println(scanner.next());
-            }
-        }catch(IOException ioe){
-            ioe.printStackTrace();
-        }
-    }
+public class RedirectIn {
+	public static void main(String[] args) {
+		try (FileInputStream fis = new FileInputStream("RedirectIn.java");) {
+			System.setIn(fis);
+			// 鍒涘缓Scanner瀵硅薄 鑾峰彇鏍囧噯杈撳叆
+			Scanner scanner = new Scanner(System.in);
+			// 鎶婂洖杞︿綔涓哄垎闅旂
+			scanner.useDelimiter("\n");
+			while (scanner.hasNext()) {
+				System.out.println(scanner.next());
+			}
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
 }

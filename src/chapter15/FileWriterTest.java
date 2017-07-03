@@ -1,17 +1,18 @@
+package chapter15;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
-//Ö±½ÓĞ´×Ö·û´®
-public class FileWriterTest{
-    public static void main(String[] args){
+//ç›´æ¥å†™å­—ç¬¦ä¸²
+public class FileWriterTest {
+	public static void main(String[] args) {
 
-try
-      (FileWriter fw = new FileWriter("pom.txt");){
-      fw.write("¾²Ò¹Ë¼ \r\n");
-fw.write("´²Ç°Ã÷ÔÂ¹â£¬ÒÉÊÇµØÉÏËª¡£\r\n");
-fw.write("¾ÙÍ·ÍûÃ÷ÔÂ£¬µÍÍ·Ë¼¹ÊÏç¡£\r\n");
-}catch(IOException ioe){
-ioe.printStackTrace();
-}
-}
+		try (FileWriter fw = new FileWriter("pom.txt");) {
+			fw.write("é™å¤œæ€ \r\n");
+			fw.write("åºŠå‰æ˜æœˆå…‰ï¼Œç–‘æ˜¯åœ°ä¸Šéœœã€‚\r\n");
+			fw.write("ä¸¾å¤´æœ›æ˜æœˆï¼Œä½å¤´æ€æ•…ä¹¡ã€‚\r\n");
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
 }
