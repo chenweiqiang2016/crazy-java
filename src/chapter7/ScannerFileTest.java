@@ -1,3 +1,5 @@
+package chapter7;
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
@@ -5,7 +7,7 @@ import java.io.IOException;
 public class ScannerFileTest{
     public static void main(String[] args) throws IOException{
         Scanner scanner = new Scanner(new File("ScannerFileTest.java"));
-        //²»Ê¹ÓÃÕâÒ»ĞĞ ½«»áÒ»¸öµ¥´ÊÒ»¸öµ¥´ÊµÄÊä³ö
+        //ä¸ä½¿ç”¨è¿™ä¸€è¡Œ å°†ä¼šä¸€ä¸ªå•è¯ä¸€ä¸ªå•è¯çš„è¾“å‡º
         scanner.useDelimiter("\n");
         while(scanner.hasNext()){
             System.out.println(scanner.next());

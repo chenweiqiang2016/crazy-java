@@ -1,6 +1,8 @@
+package chapter7;
+
 import java.util.Scanner;
 
-//ÊäÈë×Ö·û´®»áÍË³ö
+//é‡åˆ°å­—ç¬¦ä¸²è¾“å…¥ ç¨‹åºä¼šé€€å‡º
 public class ScannerLong{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);

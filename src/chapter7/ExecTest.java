@@ -1,10 +1,10 @@
-
-//µ¥¶ÀÆğÒ»¸ö½ø³Ì
+package chapter7;
+//å•ç‹¬èµ·ä¸€ä¸ªè¿›ç¨‹
 
 public class ExecTest{
     public static void main(String[] args) throws Exception{
         Runtime rt = Runtime.getRuntime();
-        //ÔËĞĞ¼ÇÊÂ±¾³ÌĞò
+        //è¿è¡Œè®°äº‹æœ¬ç¨‹åº
         rt.exec("C:\\Program Files (x86)\\IQIYI Video\\LStyle\\5.6.40.4071\\QyClient.exe");
     }
 }

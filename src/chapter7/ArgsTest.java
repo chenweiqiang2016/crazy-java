@@ -1,6 +1,8 @@
-//1¡¢²»ÊäÈë²ÎÊı
-//2¡¢ÊäÈëJava Spring
-//3¡¢ÊäÈë"Java Spring"
+package chapter7;
+
+//1ã€ä¸è¾“å…¥å‚æ•°
+//2ã€è¾“å…¥Java Spring
+//3ã€è¾“å…¥"Java Spring"
 public class ArgsTest{
     public static void main(String[] args){
         System.out.println(args.length);

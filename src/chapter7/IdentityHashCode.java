@@ -1,9 +1,11 @@
-//ÕâÊÇÓĞÓÃµÄ·½·¨ ¿ÉÒÔÅĞ¶ÏÁ½¸ö¶ÔÏóÊÇ·ñÊÇÍ¬Ò»¸ö¶ÔÏó
+package chapter7;
+
+//è¿™æ˜¯æœ‰ç”¨çš„æ–¹æ³• å¯ä»¥åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡æ˜¯å¦æ˜¯åŒä¸€ä¸ªå¯¹è±¡
 public class IdentityHashCode{
     public static void main(String[] args){
         String s1 = new String("hello");
         String s2 = new String("hello");
-        //¸ù¾İ×Ö·ûĞòÁĞ¼ÆËãhashCode ²»Í¬µÄ¶ÔÏóhashCodeÏàÍ¬
+        //æ ¹æ®å­—ç¬¦åºåˆ—è®¡ç®—hashCode ä¸åŒçš„å¯¹è±¡hashCodeç›¸åŒ
         System.out.println(s1.hashCode() + " <--> " + s2.hashCode());
         System.out.println(System.identityHashCode(s1) + " <--> " + System.identityHashCode(s2));
        

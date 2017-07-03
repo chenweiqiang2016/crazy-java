@@ -1,20 +1,20 @@
+package chapter7;
 
-
-//Windows»úÆ÷ÔËĞĞ½á¹û
-//´¦ÀíÆ÷ÊıÁ¿£º4
-//¿ÕÏĞÄÚ´æÊı£º61089208
-//×ÜÄÚ´æÊı£º62390272
-//¿ÉÓÃ×î´óÄÚ´æÊı£º917504000
+//Windowsæœºå™¨è¿è¡Œç»“æœ
+//å¤„ç†å™¨æ•°é‡ï¼š4
+//ç©ºé—²å†…å­˜æ•°ï¼š61089208
+//æ€»å†…å­˜æ•°ï¼š62390272
+//å¯ç”¨æœ€å¤§å†…å­˜æ•°ï¼š917504000
 
 
 public class RuntimeTest{
     public static void main(String[] args){
         Runtime rt = Runtime.getRuntime();
-        //×¢Òâµ¥´ÊµÄĞ´·¨ available
-        System.out.println("´¦ÀíÆ÷ÊıÁ¿£º" + rt.availableProcessors());
-        System.out.println("¿ÕÏĞÄÚ´æÊı£º" + rt.freeMemory());
-        System.out.println("×ÜÄÚ´æÊı£º" + rt.totalMemory());
-        System.out.println("¿ÉÓÃ×î´óÄÚ´æÊı£º" + rt.maxMemory());
+        //æ³¨æ„å•è¯çš„å†™æ³• available
+        System.out.println("å¤„ç†å™¨æ•°é‡ï¼š" + rt.availableProcessors());
+        System.out.println("ç©ºé—²å†…å­˜æ•°ï¼š" + rt.freeMemory());
+        System.out.println("æ€»å†…å­˜æ•°ï¼š" + rt.totalMemory());
+        System.out.println("å¯ç”¨æœ€å¤§å†…å­˜æ•°ï¼š" + rt.maxMemory());
         
         
     }
