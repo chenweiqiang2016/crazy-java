@@ -3,3 +3,10 @@
 
 
 /bin/
+
+.classpath
+.project
+.settings/
+
+*.iml
+.idea/
